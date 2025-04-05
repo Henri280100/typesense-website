@@ -199,6 +199,20 @@ mkdir "$(pwd)"/typesense-data # Use a directory like /var/lib/typesense in produ
   </template>
 </Tabs>
 
+- To start Typesense properly, you can change the default api-port and peering-port.
+- For example:
+
+<Tabs :tabs="['Shell']">
+  <template v-slot:Shell>
+    <div class="manual-highlight">
+    <pre class="language-bash"><code>
+./typesense-server --data-dir="$(pwd)"/typesense-data --api-key=$TYPESENSE_API_KEY --api-port=Your change port --peering-address=127.0.0.1 --peering-port=Your change peering port --enable-cors
+</code>
+</pre>
+</div>
+  </template>
+</Tabs>
+
 :::warning Compatibility
 v26.0 of Typesense Server requires Ubuntu 20 or later or recent versions of the Linux kernel.
 :::
